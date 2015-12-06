@@ -1,14 +1,18 @@
 
 package home;
 
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class Main {
     
-    static Scanner in = new Scanner(System.in);
-    
     public static void main(String[] args) {
         
-        MainFrame.launcher();
+        try {
+            
+            MainFrame.launcher();
+        } catch (Exception e) {
+            
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
     }
 }
